@@ -36,5 +36,7 @@ else
 * A feature for searching within the issues would be a good if applicable.
 * I can work on these if time permits.
 
+=========================
+
 * _Shivateja(Shiv) Madipalli_
   * _https://shivatejam.com_
