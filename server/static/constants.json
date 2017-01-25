@@ -16,7 +16,7 @@
   "OPTIONS": {
     "headers": {
       "User-Agent": "git_rep o_issues",
-      "Authorization": "token 967781424c114e19fbe95585652eb1675c0e6e4d"
+      "Authorization": "token 26e044cebff8a852b7914b57fc3f76804727c198"
     }
   },
   "totalCountof24Hour": "issues_in_last_24_hours",
