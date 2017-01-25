@@ -4,7 +4,8 @@
   "description": "An Application to show issues open in last 24 hours to first in a given public repo",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/app.js"
   },
   "repository": {
     "type": "git",
