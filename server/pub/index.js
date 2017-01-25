@@ -7,7 +7,7 @@ application.controller("textinputCntrl", function($scope, $http) {
     // do a rest call to node backend
     var reqData = createReqBody($scope.publicRepo);
     console.log("ReqData", reqData);
-    $http.post("http://localhost:2012/getissues", reqData)
+    $http.post("https://activegiverproj.herokuapp.com/getissues", reqData)
     .then((response) => {
       console.log("RESPONSE", response);
       console.log("response.data", response.data);
