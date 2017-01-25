@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.min.js"></script>
+    <script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arsenal:700|Merriweather" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body ng-app="git_repo_issues" ng-controller="textinputCntrl">
+    <section>
+
+    </section>
+    <section>
+      <header>
+        <h2> Welcome! to <span class="projectName">Git Repo Issues</span> my dear Jedi!</h2>
+      </header>
+      <span>Github Public Repo: </span>
+      <input type="text" id="public-repo" placeholder="Enter Public Repo" ng-model="publicRepo" ng-disabled="saving" autofocus/>
+      <input type="button" value="submit" ng-click="getIssuesCount()"></input>
+      <section>
+        <h3><span>Status: </span>{{openIssues.message}}</h3>
+        <h4><span>Since past 24 hours: </span>{{openIssues.last_24_hours}}</h4>
+        <h4><span>Since past 7 Days: </span>{{openIssues.last_7_days}}</h4>
+        <h4><span>Before 7 Days to end: </span>{{openIssues.before_7_days}}</h4>
+      </section>
+    </section>
+
+    <!-- <ng-view />
+    <script type="text/ng-template" id="textinput.html">
+      <section>
+        <span>Github Public Repo: </span><input ng-model="publicRepo" type="text"> </input>
+      </section>
+    </script> -->
+
+  </body>
+</html>
