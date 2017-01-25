@@ -1,8 +1,10 @@
 let _ = require("lodash");
 let request = require("request");
 
-let Constants = require("./constants");
-let constantsHandler = new Constants();
+// let Constants = require("./constants");
+// let Constants = new Constants();
+
+let Constants = require("../static/constants.json");
 
 // Created a class for more detailed Structure
 function GitCall() {
@@ -19,7 +21,7 @@ GitCall.prototype.fetchUserNameWithRepo = (publicRepoLink) => {
   let splitGitDetails = _.split(publicRepoLink, '/');
   return (
     splitGitDetails[splitGitDetails.length - 2] +
-    constantsHandler.SLASH +
+    Constants.SLASH +
     splitGitDetails[splitGitDetails.length - 1]
   );
 }
@@ -32,39 +34,39 @@ GitCall.prototype.createGitRequestToRetrieveIssues = (gitRepoEndpoint, sinceDate
 
   let endPoint = (
     gitRepoEndpoint +
-    constantsHandler.SLASH +
-    constantsHandler.ISSUES +
-    constantsHandler.QUESTIONMARK +
-    constantsHandler.PERPAGE100
+    Constants.SLASH +
+    Constants.ISSUES +
+    Constants.QUESTIONMARK +
+    Constants.PERPAGE100
   );
   if(sinceDate && order) {
     endPoint = (
       endPoint +
-      constantsHandler.AMPERSAND +
-      constantsHandler.SINCE +
-      constantsHandler.EQUALS +
+      Constants.AMPERSAND +
+      Constants.SINCE +
+      Constants.EQUALS +
       sinceDate +
-      constantsHandler.AMPERSAND +
-      constantsHandler.DIRECTION +
-      constantsHandler.EQUALS +
+      Constants.AMPERSAND +
+      Constants.DIRECTION +
+      Constants.EQUALS +
       order
     )
   }
   else if(sinceDate) {
     endPoint = (
       endPoint +
-      constantsHandler.AMPERSAND +
-      constantsHandler.SINCE +
-      constantsHandler.EQUALS +
+      Constants.AMPERSAND +
+      Constants.SINCE +
+      Constants.EQUALS +
       sinceDate
     )
   }
   else if(order) {
     endPoint = (
       endPoint +
-      constantsHandler.AMPERSAND +
-      constantsHandler.DIRECTION +
-      constantsHandler.EQUALS +
+      Constants.AMPERSAND +
+      Constants.DIRECTION +
+      Constants.EQUALS +
       order
     )
   }
@@ -80,10 +82,10 @@ GitCall.prototype.createGitRequestToRetrieveRepo = (userNameWithRepo) => {
   // GET endpoint/repos/:owner/:repo/issues
 
   return  (
-    constantsHandler.GIT_API_ENDPOINT +
-    constantsHandler.SLASH +
-    constantsHandler.REPOS +
-    constantsHandler.SLASH +
+    Constants.GIT_API_ENDPOINT +
+    Constants.SLASH +
+    Constants.REPOS +
+    Constants.SLASH +
     userNameWithRepo
   );
 
@@ -92,7 +94,7 @@ GitCall.prototype.createGitRequestToRetrieveRepo = (userNameWithRepo) => {
 // GitCall.prototype.getOpenIssueCount = (gitRequest) => {
 //   // call git repo
 //   return new Promise(function(resolve, reject) {
-//     request.get(gitRequest, constantsHandler.OPTIONS, (error, response, body) => {
+//     request.get(gitRequest, Constants.OPTIONS, (error, response, body) => {
 //       // console.log("error in getOpenIssueCount", error);
 //       // console.log("response in getOpenIssueCount", response);
 //       // console.log("body in getOpenIssueCount", body);
@@ -115,15 +117,11 @@ GitCall.prototype.createGitRequestToRetrieveRepo = (userNameWithRepo) => {
 GitCall.prototype.doGitAPICall = function(gitRequest) {
   // call git repo
   return new Promise(function(resolve, reject) {
-    request.get(gitRequest, constantsHandler.OPTIONS, (error, response, body) => {
+    request.get(gitRequest, Constants.OPTIONS, (error, response, body) => {
       // console.log("error in getOpenIssueCount", error);
       // console.log("response in getOpenIssueCount", response);
       // console.log("response. headers", response.headers);
       body = JSON.parse(body);
-      // console.log("BODY:", body);
-      // if(body.has_issues) {
-      //   this.openIssuesCount = body.open_issues_count;
-      // }
       let result = {
         body: body,
         response_headers: response.headers

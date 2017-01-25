@@ -1,7 +1,56 @@
 body {
   font-family: 'Merriweather', serif;
+  opacity: 0.8;
+  filter:alpha(opacity=80);
+}
+
+html {
+  font-size: 20px;
+  background-image: url("images/twitter_background.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 
 .projectName {
   font-family: 'Arsenal', sans-serif;
+  /*text-transform: uppercase;*/
+  letter-spacing: 1px;
+  color: #ffc600;
+}
+
+input[type="text"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-size: 18px;
+  font-family: 'Merriweather', serif;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  height: 8%;
+  font-size: inherit;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+.color-yellow {
+  color: #ffc600;
+}
+
+.color-red {
+  color: #E53935;
+}
+
+.section-background {
+  border:4px solid black;
+border-radius:5px;
+margin:1rem;
+font-size: 1.4rem;
+padding:1rem .5rem;
+transition:all .07s;
+text-align: center;
+color:white;
+background:rgba(0,0,0,0.4);
+text-shadow:0 0 5px black;
 }

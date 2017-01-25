@@ -1,0 +1,32 @@
+{
+  "SLASH": "/",
+  "GIT_API_ENDPOINT": "https://api.github.com",
+  "REPOS": "repos",
+  "ISSUES": "issues",
+  "ASC": "asc",
+  "DESC": "desc",
+  "SINCE": "since",
+  "DIRECTION": "direction",
+  "QUESTIONMARK": "?",
+  "AMPERSAND": "&",
+  "URLREGEX": "/[-a-zA-Z0-9@:%_\\+.~#?&//=]{2,256}\\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\\+.~#?&/=]*)?/gi;",
+  "EQUALS": "=",
+  "PERPAGE100": "per_page=100",
+  "HUNDRED": "100",
+  "OPTIONS": {
+    "headers": {
+      "User-Agent": "git_rep o_issues",
+      "Authorization": "token 967781424c114e19fbe95585652eb1675c0e6e4d"
+    }
+  },
+  "totalCountof24Hour": "issues_in_last_24_hours",
+  "totalCountOf7Days": "issues_in_last_7_days",
+  "before7Days": "before_7_days",
+  "totalOpenIssues": "total_open_issues",
+  "UNDEFINED": "undefined",
+  "last24hours": "last24hours",
+  "last7days": "last7days",
+  "MESSAGE": "message",
+  "STATUS": "status",
+  "SUCCESS_MESSAGE": "Successful"
+}

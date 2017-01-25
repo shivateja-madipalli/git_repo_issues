@@ -20,7 +20,7 @@ Constants.prototype.URLREGEX = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(
 Constants.prototype.OPTIONS = {
   headers: {
     'User-Agent': 'git_repo_issues',
-    'Authorization': 'token 1e5a772d8a1091895a71f1bb9907b465008cec82'
+    'Authorization': 'token 967781424c114e19fbe95585652eb1675c0e6e4d'
   }
 };
 

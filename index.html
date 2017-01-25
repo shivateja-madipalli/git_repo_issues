@@ -11,18 +11,17 @@
     <section>
 
     </section>
-    <section>
+    <section class="section-background">
       <header>
         <h2> Welcome! to <span class="projectName">Git Repo Issues</span> my dear Jedi!</h2>
       </header>
-      <span>Github Public Repo: </span>
-      <input type="text" id="public-repo" placeholder="Enter Public Repo" ng-model="publicRepo" ng-disabled="saving" autofocus/>
-      <input type="button" value="submit" ng-click="getIssuesCount()"></input>
+      <input type="text" class="style-1" id="public-repo" placeholder="Enter Public Repo" ng-model="publicRepo" ng-disabled="saving" ng-keyup="$event.keyCode == 13 ? getIssuesCount() : null" autofocus/>
       <section>
-        <h3><span>Status: </span>{{openIssues.message}}</h3>
-        <h4><span>Since past 24 hours: </span>{{openIssues.last_24_hours}}</h4>
-        <h4><span>Since past 7 Days: </span>{{openIssues.last_7_days}}</h4>
-        <h4><span>Before 7 Days to end: </span>{{openIssues.before_7_days}}</h4>
+        <h3>Message:<span ng-class="colorcode">{{openIssues.message}}</span></h3>
+        <h3>Status: <span ng-class="colorcode">{{openIssues.status}}</span></h3>
+        <h4>Since past 24 hours: <span class="color-yellow">{{openIssues.issues_in_last_24_hours}}</span></h4>
+        <h4>Since past 7 Days: <span class="color-yellow">{{openIssues.issues_in_last_7_days}}</span></h4>
+        <h4>Before 7 Days to end: <span class="color-yellow">{{openIssues.before_7_days}}</span></h4>
       </section>
     </section>
 
