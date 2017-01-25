@@ -7,10 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server/app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shivateja-madipalli/git_repo_issues"
-  },
   "author": "Shivateja Madipalli",
   "license": "ISC",
   "dependencies": {
