@@ -53,7 +53,7 @@ app.all('*',function(req, res, next) {
 
 app.get('/', function(req, res) {
   // res.sendFile('../index.html', { root: __dirname });
-  res.sendFile(path.resolve('../index.html'));
+  res.sendFile(path.resolve('./index.html'));
   // res.sendFile('../index.html');
 });
 
