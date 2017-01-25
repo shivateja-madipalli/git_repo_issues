@@ -10,7 +10,7 @@ let Constants = require("./static/constants.json");
 let Errors = require("./static/error.json");
 
 let gitCallHandler = new GitCall();
-const PORT = "2012";
+const PORT = process.env.PORT || 2012;
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({extended: true})); // for parsing application/x-www-form-encoded

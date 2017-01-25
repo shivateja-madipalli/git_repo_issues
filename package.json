@@ -2,9 +2,13 @@
   "name": "git_repo_issues",
   "version": "1.0.0",
   "description": "An Application to show issues open in last 24 hours to first in a given public repo",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivateja-madipalli/git_repo_issues"
   },
   "author": "Shivateja Madipalli",
   "license": "ISC",
