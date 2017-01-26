@@ -31,10 +31,9 @@ else
 * May the force be with you \m/
 
 #### Scope for enhancement:
-* The data looks static and can be imporoved by giving a date range slider (double sliders to choose max & min).
+* The data looks static and can be improved by giving a date range slider (double sliders to choose max & min).
 * The Alogorithm currently retrives 7 Days data after fetching 24 hour data which can be clubbed into one and do a git call only once.
-* A feature for searching within the issues would be a good if applicable.
-* I can work on these if time permits.
+* A feature for searching within the issues would be good if applicable.
 
 =========================
 
